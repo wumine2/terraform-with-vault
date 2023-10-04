@@ -8,7 +8,7 @@ resource "vault_aws_secret_backend" "aws" {
   secret_key = var.secret_key
   region     = "us-east-1"
 
-  default_lease_ttl_seconds = "120"
+  default_lease_ttl_seconds = "1200"
   max_lease_ttl_seconds     = "3600"
 }
 
@@ -24,7 +24,7 @@ resource "vault_aws_secret_backend_role" "ec2-admin" {
     {
       "Effect": "Allow",
       "Action": [
-        "iam:*", "ec2:*"
+        "iam:*", "ec2:*", "s3:*", "kms:*"
       ],
       "Resource": "*"
     }
