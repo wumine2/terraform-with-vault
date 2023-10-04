@@ -1,3 +1,5 @@
-.terraform*
+terraform.tfstate
 your*
 terraform*
+terraform.tfstate.backup
+.terraform.*
